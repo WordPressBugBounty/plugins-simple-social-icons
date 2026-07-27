@@ -308,3 +308,13 @@
 	background-color: #F45F31;
 	color: #ffffff;
 }
+
+/* Apple Music */
+:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-applemusic {
+	color: #FA243C;
+}
+
+:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-applemusic {
+	background-color: #FA243C;
+	color: #ffffff;
+}

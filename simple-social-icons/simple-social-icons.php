@@ -5,7 +5,7 @@
  * Description: A simple CSS and SVG driven social icons widget. Also extends WordPress core Social Icons block with additional icon variations (WordPress 6.9+).
  * Author: OsomPress
  * Author URI: https://www.osompress.com/
- * Version: 4.0.0
+ * Version: 4.1.0
  * Requires at least: 4.0
  * Requires PHP: 7.4
  * Text Domain: simple-social-icons
@@ -102,10 +102,12 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'background_color_hover' => '#666666',
 				'alignment'              => 'alignleft',
 				'amazon'                 => '',
+				'applemusic'             => '',
 				'behance'                => '',
 				'bloglovin'              => '',
 				'bluesky'              => '',
 				'diaspora'              => '',
+				'discord'                => '',
 				'dribbble'               => '',
 				'email'                  => '',
 				'etsy'                  => '',
@@ -123,6 +125,7 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'pinterest'              => '',
 				'reddit'                 => '',
 				'rss'                    => '',
+				'signal'                 => '',
 				'snapchat'               => '',
 				'substack'               => '',
 				'telegram'               => '',
@@ -130,6 +133,7 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'tiktok'                 => '',
 				'tripadvisor'            => '',
 				'tumblr'                 => '',
+				'twitch'                 => '',
 				'twitter'             	 => '',
 				'vimeo'                  => '',
 				'whatsapp'               => '',
@@ -152,6 +156,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'Amazon URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'amazon', __( 'Amazon', 'simple-social-icons' ) ),
 				),
+				'applemusic' => array(
+					'label'   => __( 'Apple Music URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'applemusic', __( 'Apple Music', 'simple-social-icons' ) ),
+				),
 				'behance'     => array(
 					'label'   => __( 'Behance URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'behance', __( 'Behance', 'simple-social-icons' ) ),
@@ -167,6 +175,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'diaspora'    => array(
 					'label'   => __( 'Diaspora URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'diaspora', __( 'Diaspora', 'simple-social-icons' ) ),
+				),
+				'discord'     => array(
+					'label'   => __( 'Discord URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'discord', __( 'Discord', 'simple-social-icons' ) ),
 				),
 				'dribbble'    => array(
 					'label'   => __( 'Dribbble URI', 'simple-social-icons' ),
@@ -236,6 +248,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'RSS URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'rss', __( 'RSS', 'simple-social-icons' ) ),
 				),
+				'signal'      => array(
+					'label'   => __( 'Signal URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'signal', __( 'Signal', 'simple-social-icons' ) ),
+				),
 				'snapchat'    => array(
 					'label'   => __( 'Snapchat URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'snapchat', __( 'Snapchat', 'simple-social-icons' ) ),
@@ -263,6 +279,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'tumblr'      => array(
 					'label'   => __( 'Tumblr URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'tumblr', __( 'Tumblr', 'simple-social-icons' ) ),
+				),
+				'twitch'      => array(
+					'label'   => __( 'Twitch URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'twitch', __( 'Twitch', 'simple-social-icons' ) ),
 				),
 				'twitter'     => array(
 					'label'   => __( 'X URI', 'simple-social-icons' ),
@@ -879,6 +899,10 @@ function simple_social_icons_register_services( $services_data ) {
 		'ivoox'       => array(
 			'name' => _x( 'iVoox', 'social link block variation name', 'simple-social-icons' ),
 			'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="translate(0, 24) scale(0.005797, -0.005797)"><path d="M693 4130 c-314 -47 -557 -257 -664 -575 l-24 -70 -3 -1380 c-2 -1228 -1 -1389 13 -1459 64 -317 314 -567 631 -631 70 -14 231 -15 1454 -13 1548 3 1410 -4 1585 82 214 106 365 291 427 526 l23 85 0 1370 c0 1546 5 1439 -79 1612 -104 213 -293 370 -525 436 l-76 22 -1355 1 c-745 1 -1378 -2 -1407 -6z m1517 -430 c65 -18 144 -73 177 -123 43 -64 56 -117 51 -198 -6 -75 -43 -154 -91 -195 -80 -67 -201 -101 -325 -90 -202 18 -325 136 -325 311 0 198 161 324 398 310 44 -2 96 -9 115 -15z m-836 -622 c2 -13 9 -57 15 -98 34 -225 209 -409 447 -470 162 -42 366 -36 515 15 219 74 360 242 398 474 l16 101 378 0 377 0 0 -23 c0 -50 -22 -197 -41 -272 -75 -295 -306 -568 -614 -723 -91 -45 -222 -93 -307 -112 -32 -7 -58 -16 -58 -20 0 -4 26 -13 58 -20 219 -48 452 -173 614 -328 207 -198 316 -429 343 -724 l7 -78 -380 0 -380 0 -7 66 c-38 355 -329 573 -735 550 -205 -11 -355 -70 -471 -186 -93 -92 -169 -257 -169 -366 0 -68 27 -64 -388 -64 l-375 0 6 93 c18 264 148 536 345 718 82 76 235 178 335 224 90 40 242 92 297 101 51 8 51 20 0 28 -60 9 -216 64 -307 107 -190 91 -384 252 -486 406 -106 159 -172 350 -184 531 l-6 92 376 0 377 0 4 -22z"/></g></svg>',
+		),
+		'applemusic'  => array(
+			'name' => _x( 'Apple Music', 'social link block variation name', 'simple-social-icons' ),
+			'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>',
 		),
 	);
 

@@ -23,3 +23,15 @@ Font license info
 
    The rights to each pictogram in the social extention are either trademarked or copyrighted by the respective company.
    Icons that are included in the social extention can be identified at http://www.entypo.com/.
+
+
+## Simple Icons
+
+   Copyright (c) Simple Icons Collaborators
+
+   License:   CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+   Homepage:  https://simpleicons.org
+
+   Icon artwork is dedicated to the public domain, but the brand names, logos, and
+   marks referenced remain trademarks or copyrights of their respective owners.
+   Follow each brand's usage guidelines when displaying their icon.

@@ -1,11 +1,13 @@
-=== Plugin Name ===
-Contributors: studiopress, nathanrice, bgardner, dreamwhisper, laurenmancke, shannonsans, modernnerd, marksabbath, damiencarbery, helgatheviking, littlerchicken, tiagohillebrandt, wpmuguru, michaelbeil, norcross, rafaltomal, osompress, esther_sola, nahuai
+=== Simple Social Icons ===
+Contributors: studiopress, nathanrice, bgardner, dreamwhisper, laurenmancke, modernnerd, marksabbath, helgatheviking, littlerchicken, tiagohillebrandt, wpmuguru, michaelbeil, norcross, rafaltomal, osompress, esther_sola, nahuai
 Tags: social media, social networking, social profiles
 Requires at least: 4.0
-Tested up to: 6.9
-Stable tag: 4.0.0
+Tested up to: 7.0
+Stable tag: 4.1.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin provides two ways to display social icons: a traditional widget (available on all WordPress versions) and block variations for the core Social Icons block (WordPress 6.9+).
+Display icons linking to your social profiles, via the classic widget or the core Social Icons block variations.
 
 == Description ==
 
@@ -149,6 +151,10 @@ This will remove icon styling options in the widget settings, and prevent Simple
 NOTE - The rights to each pictogram in the social extension are either trademarked or copyrighted by the respective company.
 
 == Changelog ==
+
+= 4.1.0 =
+* Added Apple Music, Discord, Signal, and Twitch icons to the widget
+* Added Apple Music, Discord, and Twitch as block variations (Signal was already available as a block variation)
 
 = 4.0.0 =
 * Added block variations support for WordPress 6.9+
